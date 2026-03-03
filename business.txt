@@ -1,0 +1,232 @@
+Əla 👍
+Elə təsəvvür edək ki, Business Analyst görüşdən çıxıb və sənə development üçün real işlənə bilən Business Requirements Document hazırlayıb.
+
+Project: Civiq
+
+📄 Civiq – Business Requirements Document (BRD)
+1. 📌 Project Overview
+
+Civiq şəhər daxilində baş verən yol hərəkəti qayda pozuntularının:
+
+avtomatik qəbul edilməsi
+
+emal olunması
+
+hüquqi cəriməyə çevrilməsi
+
+vətəndaşlara bildirilməsi
+
+üçün nəzərdə tutulmuş distributed violation management platform-dur.
+
+Sistem müxtəlif AI kamera və sensor sistemlərindən gələn məlumatları qəbul edərək real-time şəkildə dövlət qurumlarının istifadə edə biləcəyi strukturlu məlumatlara çevirir.
+
+2. 🎯 Business Goals
+
+Civiq aşağıdakı problemləri həll edir:
+
+Problem	Həll
+Manual cərimə prosesi yavaşdır	Avtomatik violation pipeline
+Sübutların idarəsi çətindir	Mərkəzləşdirilmiş violation storage
+Gecikmiş bildirişlər	Real-time notification
+Statistika yoxdur	Analytics-ready read models
+Təkrar violationlar	History tracking
+3. 👥 Stakeholders
+Rol	İstifadə
+Traffic Police	Violation monitorinq
+Municipality	Analitika
+Citizens	Cərimə görüntüləmə
+Legal Authority	Təsdiq prosesi
+System Admin	Sistem idarəsi
+4. 🧱 High-Level System Flow
+AI Camera
+   ↓
+Detection Service
+   ↓
+Violation Event Bus
+   ↓
+Processing Service
+   ↓
+Fine Service
+   ↓
+Notification Service
+   ↓
+Citizen Portal (Query Side)
+5. 📦 Core Business Domains
+5.1 Violation Intake
+
+Sistem AI kameradan gələn violation datasını qəbul edir.
+
+Violation data:
+
+Nömrə (plate)
+
+Lokasiya
+
+Zaman
+
+Pozuntu növü
+
+Sübut (image/video ref)
+
+5.2 Violation Validation
+
+Sistem aşağıdakıları yoxlayır:
+
+Duplicate violation?
+
+Eyni vaxt aralığında təkrar?
+
+Eyni kamera spam göndərib?
+
+5.3 Fine Creation
+
+Hər violation hüquqi cəriməyə çevrilir:
+
+Violation Type	Fine
+Speed	20 AZN
+Bus Lane	40 AZN
+Illegal Parking	30 AZN
+5.4 Citizen Notification
+
+Vətəndaş:
+
+SMS
+
+Email
+
+Portal
+
+vasitəsilə məlumatlandırılır.
+
+5.5 Reporting & Query
+
+İstifadəçilər görə bilər:
+
+Aktiv cərimələr
+
+Tarixçə
+
+Ödəniş statusu
+
+Şəhər üzrə statistika
+
+6. 🧠 Business Events
+
+Civiq event-driven işləyir.
+
+Əsas business eventlər:
+
+ViolationDetected
+ViolationValidated
+FineCreated
+CitizenNotified
+FinePaid
+ViolationRejected
+7. 🧾 Business Rules
+Rule 1 – Duplicate Prevention
+
+Eyni nömrə + eyni kamera + 5 dəqiqə → yalnız 1 violation
+
+Rule 2 – Validation Required
+
+Təsdiq olunmamış violation cəriməyə çevrilə bilməz
+
+Rule 3 – Notification Mandatory
+
+Cərimə yaradıldıqdan sonra vətəndaş xəbərdar edilməlidir
+
+Rule 4 – Immutable History
+
+Violation silinmir, yalnız status dəyişir
+
+8. 🟢 User Stories
+👮 Police Officer
+
+Sistemdə violationları görə bilmək istəyir
+
+Filtrləyə bilmək istəyir
+
+Manual review edə bilmək istəyir
+
+🧑 Citizen
+
+Öz cərimələrini görə bilmək istəyir
+
+Status izləmək istəyir
+
+Bildiriş almaq istəyir
+
+🏛 Municipality
+
+Heatmap statistika
+
+Violation density
+
+Risk zonalar
+
+9. ⚙️ Non-Functional Requirements
+Requirement	Need
+High Availability	24/7 işləməlidir
+Scalability	Kamera sayı artdıqca sistem böyüməlidir
+Consistency	Fine data dəqiq olmalıdır
+Event Logging	Audit üçün saxlanmalıdır
+Latency	< 3 sec violation processing
+10. 🧩 System Capabilities (For Architecture)
+
+Bu hissə developer üçün vacibdir 👇
+
+Sistem:
+
+Multi database istifadə etməlidir
+
+Async processing dəstəkləməlidir
+
+Event-based olmalıdır
+
+Eventually consistent olmalıdır
+
+11. 📊 KPI-lar
+Metric	Target
+Violation processing time	< 3 sec
+Duplicate rate	< 2%
+Notification success	> 98%
+System uptime	99.9%
+12. 🚫 Out of Scope (MVP üçün)
+
+Payment system
+
+Court appeal system
+
+AI detection logic
+
+13. 🟣 MVP Scope
+
+MVP-də olacaq:
+
+✅ Violation qəbul
+✅ Validation
+✅ Fine creation
+✅ Notification
+✅ Citizen query panel
+
+14. 📈 Future Scope
+
+ML risk prediction
+
+Dynamic fine pricing
+
+Insurance integration
+
+Smart traffic policy engine
+
+✔️ Nəticə
+
+Civiq:
+
+real dövlət problemi həll edir
+
+distributed system tələb edir
+
+multi DB tələb edir
+
+CQRS üçün ideal use-case-dir
