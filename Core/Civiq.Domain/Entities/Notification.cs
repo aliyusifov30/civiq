@@ -11,10 +11,10 @@ namespace Civiq.Domain.Entities
     {
 
 
-        public int CitizenId { get; set; }
+        public Guid CitizenId { get; set; }
         public Citizen Citizen { get; set; }
 
-        public int FineId { get; set; }
+        public Guid FineId { get; set; }
         public Fine Fine { get; set; }
 
         public string Channel { get; set; }

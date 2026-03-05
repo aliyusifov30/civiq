@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Civiq.Infrastructure", "Inf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Civiq.Persistence", "Infrastructure\Civiq.Persistence\Civiq.Persistence.csproj", "{2FBF04D1-E168-4993-9DAF-473102F676C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Civiq.AI-Detection", "Civiq.AI-Detection\Civiq.AI-Detection.csproj", "{FE4BF32E-7893-493C-B722-8AB8D308BC59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2FBF04D1-E168-4993-9DAF-473102F676C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FBF04D1-E168-4993-9DAF-473102F676C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FBF04D1-E168-4993-9DAF-473102F676C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE4BF32E-7893-493C-B722-8AB8D308BC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4BF32E-7893-493C-B722-8AB8D308BC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE4BF32E-7893-493C-B722-8AB8D308BC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE4BF32E-7893-493C-B722-8AB8D308BC59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{036F7990-3BDA-4BF8-A0E5-09F990B8CEAE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{2ECA5765-05D3-42EE-83A9-8DB5739B4AD2} = {94FE057C-3CFD-4172-B3ED-67139492FCC9}
 		{2FBF04D1-E168-4993-9DAF-473102F676C6} = {94FE057C-3CFD-4172-B3ED-67139492FCC9}
+		{FE4BF32E-7893-493C-B722-8AB8D308BC59} = {366716C5-2D84-4D8E-930E-FC913D96DF53}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76A73963-2D4A-4CF3-A2B1-02D062D04DA8}

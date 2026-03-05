@@ -9,7 +9,7 @@ namespace Civiq.Domain.Entities
 {
     public class Evidence : BaseEntity
     {
-        public int ViolationId { get; set; }
+        public Guid ViolationId { get; set; }
         public Violation Violation { get; set; }
 
         public string ImageUrl { get; set; }

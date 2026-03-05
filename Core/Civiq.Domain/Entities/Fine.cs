@@ -11,7 +11,7 @@ namespace Civiq.Domain.Entities
     {
         public int Amount { get; set; }
 
-        public int ViolationId { get; set; }
+        public Guid ViolationId { get; set; }
         public Violation Violation { get; set; }
     }
 }

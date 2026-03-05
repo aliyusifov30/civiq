@@ -20,9 +20,9 @@ namespace Civiq.Domain.Entities
 
 
         public Vehicle Vehicle { get; set; }
-        public int VehicleId { get; set; }
+        public Guid VehicleId { get; set; }
         
         public Camera Camera { get; set; }
-        public int CameraId { get; set; }
+        public Guid CameraId { get; set; }
     }
 }

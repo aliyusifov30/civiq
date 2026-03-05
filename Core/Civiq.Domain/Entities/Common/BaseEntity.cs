@@ -9,7 +9,7 @@ namespace Civiq.Domain.Entities.Common
 {
     public class BaseEntity
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public EntityState State { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
