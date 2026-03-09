@@ -25,7 +25,8 @@ namespace Civiq.Persistence.Contexts
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Violation> Violations { get; set; }
-
+        public DbSet<DetectViolation> DetectViolations { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_configuration.GetConnectionString("Default"));

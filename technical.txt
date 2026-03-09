@@ -1,0 +1,2 @@
+Outboxing Pattern
+Event Driven Sync

@@ -1,0 +1,6 @@
+@Civiq.DetectionGateway_HostAddress = http://localhost:5288
+
+GET {{Civiq.DetectionGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
